@@ -1,0 +1,71 @@
+  <div class="contenedor-background">
+
+    <div class="card text-center">
+
+      <div class="container">
+      <div class="card-body">
+        <h5 class="card-title title">Brigada S.O.S</h5>
+        <p class="card-text title-informacion">¿Estoy en problemas y no se como resolverlos?</p>
+
+        <!-- BUSCADOR -->
+          <div class="container mb-3 contenedor-buscador">
+            <!-- <form clas="d-flex"> -->
+            <form class="form-buscador">
+              <!-- <input class="form-control input-buscador" type="search" placeholder="Buscar solucion" aria-label="Search" >
+              <button class="btn  btn-lg" type="button"><i class="fa fa-search"></i></button> -->
+              <input type="search" class="form-control input-buscador" placeholder="Buscar Solución" aria-label="Search">
+              <span class="left-pan"><i class="fa fa-search"></i> </span>
+            </form>
+          </div>
+
+      <!-- SECCION 911 EMERGENCIA -->
+      <div class="row ">
+        <div class="col-sm-12">
+
+          <div class="card card-seccion">
+            <div class="card-body card-seccion-body ">
+              <img src="../../../assets/img/911.png"  class="card-img-top img-fluid img-seccion-emergencia" alt="911" title="911" [routerLink]="['/home']" routerLinkActive="router-link-active">
+              <h5 class="card-title texto-informacion">Es una emergencia</h5>
+            </div>
+          </div>
+
+        <!-- SECCION NECESITO ASESORIA -->
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <!-- SECCION REQUIERO IMAGENES-->
+      <div class="row">
+        <div class="col-sm-6 border-izquierdo" >
+          <div class="card card-seccion">
+            <div class="card-body card-seccion-body">
+              <img src="../../../assets/img/ima.png"
+                    class="card-img-top img-fluid img-seccion-imagenes" alt="img" title="img" [routerLink]="['/requiero-imagenes']" routerLinkActive="router-link-active" >
+              <h5 class="card-title texto-informacion m-0">Requiero imagenes</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCION REQUIERO VIDEOS -->
+        <div class="col-sm-6">
+          <div class="card card-seccion">
+            <div class="card-body card-seccion-body">
+              <img src="../../../assets/img/video.png" class="card-img-top img-fluid img-seccion-videos" alt="youtube" title="youtube" [routerLink]="['/requiero-videos']" routerLinkActive="router-link-active" >
+              <h5 class="card-title texto-informacion">Requiero videos</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+

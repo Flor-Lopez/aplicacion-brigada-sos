@@ -1,0 +1,105 @@
+.contenedor-background {
+  height: 100vh;
+  background: #219EBC;
+  padding-top: 60px;
+}
+
+/* LOGOTIPO */
+.content-logotipo{
+  display: block;
+  text-align: center;
+  margin-top: -150px;
+  margin-bottom: 20px;
+  }
+
+
+.logotipo{
+  width: 200px;
+  padding: 5px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  background: #ffffff;
+}
+
+input{
+  /* border: 1px solid #707070; */
+  border-radius: 18px;
+  color: #9A9191;
+  font-size: 20px;
+}
+
+/* Cambio en tamaño de inputs */
+.contenedor-input{
+  width: 450px;
+  margin: 0 auto;
+}
+
+.btn-ingresar{
+  background: #DD3131;
+  border-radius:13px;
+  font-size: 20px;
+  width: 155px;
+  height: 48px;
+  height: 48px;
+  color: #ffffff;
+  margin:  0 auto;
+}
+
+hr {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.btn-google{
+  background: #DD3131;
+  border-radius: 18px;
+  height: 50px;
+  width: 352px;
+  color: #ffffff;
+  border: 1px solid #707070;
+  margin-bottom: 28px;
+  font-size: 20px;
+  margin:  0 auto;
+
+}
+
+.btn-facebook{
+  background: #2217BC;
+  margin-bottom: 20px;
+
+}
+
+.icon-google, .icon-facebook{
+  margin-right: 45px;
+}
+
+.content-info-registrarme{
+  display: block;
+  text-align: center;
+
+}
+
+.info-registrarme{
+    font-size: 20px;
+    color: #707070;
+}
+
+.btn-registrarme{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 420px) {
+  .btn-google{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .contenedor-input{
+    width: auto;
+  }
+}

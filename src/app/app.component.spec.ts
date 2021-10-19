@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'aplicacion-brigada-sos'`, () => {
+  it(`should have as title 'brigada-sos'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('aplicacion-brigada-sos');
+    expect(app.title).toEqual('brigada-sos');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('aplicacion-brigada-sos app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('brigada-sos app is running!');
   });
 });

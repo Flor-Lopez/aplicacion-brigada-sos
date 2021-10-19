@@ -1,0 +1,64 @@
+<h2>Formulario Reactivo</h2>
+
+<hr>
+<form [formGroup]="formulario" (ngSubmit)="save()">
+  <div>
+
+    <div class="form-group row p-2">
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+
+        <input class="form-control"
+              type="text"
+              placeholder="Nombre"
+              formControlName="name"
+              [class.is-invalid]="
+              formulario.get('name').invalid &&
+              formulario.get('name').touched"
+              >
+      </div>
+    </div>
+
+    <div class="form-group row p-2">
+      <label class="col-2 col-form-label">Apellido</label>
+      <div class="col-8">
+
+        <input class="form-control"
+              type="text"
+              placeholder="Apellido"
+              formControlName="lastname"
+              [class.is-invalid]="
+              formulario.get('lastname').invalid &&
+              formulario.get('lastname').touched">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row p-2">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-8">
+
+      <input class="form-control"
+              type="email"
+              placeholder="Correo electrónico"
+              formControlName="email"
+              [class.is-invalid]="
+              formulario.get('email').invalid &&
+              formulario.get('email').touched">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<hr>
+<h5>Estado: {{formulario.valid}}</h5>

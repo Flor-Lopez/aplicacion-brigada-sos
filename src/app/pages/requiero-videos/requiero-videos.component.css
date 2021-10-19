@@ -1,0 +1,69 @@
+.containerr{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.contenedor-background{
+  height: 100vh;
+  background: #219EBC;
+  padding-top: 40px;
+}
+
+/* CARD PRINCIPAL */
+.card-principal {
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  font-size: 25px;
+  width: 30%;
+  color: #707070;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* LOGOTIPO */
+.img-logotipo{
+  width: 100px;
+  height: 132px;
+}
+
+/* BUSCADOR */
+.contenedor-buscador{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+}
+
+
+.form-buscador {
+  position: relative;
+}
+
+.form-buscador span {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+}
+.form-buscador .fa-search {
+  color: #707070;
+  height: 27px;
+  width: 25px;
+}
+
+.input-buscador {
+  height: 55px;
+  border-radius: 10px;
+
+}
+
+/* BOTON REGRESAR */
+.btn-regresar{
+  position: relative;
+  top: -50px;
+  font-size: 30px;
+  color: white;
+}
