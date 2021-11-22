@@ -1,0 +1,24 @@
+
+.contenedor-background{
+  background: #219EBC;
+}
+
+/* BOTON REGRESAR */
+.btn-regresar{
+  top: -50px;
+  margin-left: 2%;
+  font-size: 30px;
+  color: white;
+}
+
+.setting{
+  width: 60px;
+  height: 50px;
+  margin-left: 86.5%;
+  background: none;
+  border: none;
+}
+
+.img-setting{
+  width: 40px;
+}

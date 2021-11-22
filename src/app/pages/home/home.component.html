@@ -1,5 +1,22 @@
-  <div class="contenedor-background">
 
+<div class="contenedor-background-setting">
+
+  <div class="dropdown" *ngIf="user$ | async as user">
+
+    <!-- BOTON SETTING-->
+
+    <button class="btn dropdown-toggle" class="setting" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="../../../assets/img/settings.png" class="img-setting" alt="">
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li *ngIf="user"><a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesión</a></li>
+      <li><a class="dropdown-item">{{ user?.email }}</a></li>
+    </ul>
+  </div>
+
+  </div>
+
+  <div class="contenedor-background">
     <div class="card text-center">
 
       <div class="container">

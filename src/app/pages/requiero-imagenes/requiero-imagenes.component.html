@@ -1,29 +1,86 @@
-<div class="contenedor-background">
+<app-navbar></app-navbar>
+
+<div class="contenedor-background pb-5">
 
   <div class="card card-principal">
     <div class="containerr">
 
-      <button type="button" class="btn btn-regresar" (click)="regresar()"><i class="fas fa-long-arrow-alt-left"></i></button>
-
-
       <div class="card-body">
-        <div class="d-flex justify-content-center align-items-center mb-5">
+        <div class="d-flex justify-content-center align-items-center mb-3">
           <img src="../../../assets/img/logotipo.png" class="card-img-top img-fluid img-logotipo" alt="...">
           <h5 class="card-title title">Brigada S.O.S</h5>
 
           <div class="  contenedor-buscador">
-            <form id="form" class="form-buscador">
-              <input type="search" class="form-control input-buscador" id="search" placeholder="Buscar Solución" aria-label="Search">
-              <span class="left-pan"><i class="fa fa-search"></i> </span>
+            <form id="form" class="form-buscador" [formGroup]="buscadorForm" (ngSubmit)="onBuscar()">
+              
+              <!-- FORMULARIO REACTIVO -->
+              <div class="form-group row p-2">
+                <div class="col">
+                  <select class="form-select select-buscador form-select-lg mb-1" aria-label=".form-select-lg example"
+                          type="text"
+                          name="categroria"
+                          formControlName="categoria"
+                          [class.is-invalid]="categoriaInvalido"
+                          >
+                  
+                    <option value="">Seleccione una categoria</option>
+                    <option value="Quemadura">Quemadura</option>
+                    <option value="Heridas">Heridas</option>
+                  </select>
+                  <small *ngIf="categoriaInvalido" class="text-danger text-validacion">Falta seleccionar datos</small>
+
+                </div>
+              </div>
+
+              <!-- Boton SEARCH GUARDAR  -->
+                <button type="submit" class="btn btn-search btn-outline-secondary btn-block">
+                  <span  class="left-pan"><i class="fa fa-search"></i> </span>
+                </button>
+          
             </form>
           </div>
+          
         </div>
+
+        <h3 class="text-secondary text-center" *ngIf="mensaje_seleccion" >Es necesario que seleccione su padecimiento para que los resultados se muestren</h3>
+        
+      </div>
+
+      <!-- CARDS -->
+      <h3 class="text-secondary mb-5" *ngIf="mensaje_title_quemadura" >Cómo tratar una quemadura <strong>- Tratamiento rápido</strong></h3>
+      <h3 class="text-secondary mb-5" *ngIf="mensaje_title_herida" >Cómo curar las heridas abiertas rápidamente</h3>
+
+       <div class="row">
+         
+         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xs-12 mb-5 " *ngFor="let imagen of imagenes">
+           
+          <div class="card card-padecimiento">
+            <img src="../../../assets/img/bordes-imagen.png" class="bg-verde img-fluid"  alt="..." >
+            <br class="br"> 
+            <div class="hr"></div> 
+
+            <div class="border-left"></div> 
+            <div class="card-body">
+              <h1 class="num_paso ">{{imagen.num_paso}}</h1>
+              <h5 class="card-title card-paso-padecimiento">{{imagen.title | uppercase}}</h5>
+              <img src="{{imagen.url_imagen}}" class="card-img-top img-fluid mb-2"  alt="...">
+              <p class="card-text card-descripcion-padecimiento text-align-justify">{{imagen.description}}</p>
+
+            </div>
+            <div class="card-footer border-none">
+              <p class="card-text card-descripcion-padecimiento text-secondary"> <span class="text-danger  nota-recomendacion"><strong>Nota:</strong></span>{{imagen.recomendacion || 'Ninguna' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       </div>
 
-    </div>
   </div>
 </div>
+
+
 
 
 

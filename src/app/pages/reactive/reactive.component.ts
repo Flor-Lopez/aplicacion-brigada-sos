@@ -1,6 +1,8 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { Servicio } from 'src/app/models/imagenes.interface';
 
 @Component({
   selector: 'app-reactive',
@@ -8,10 +10,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive.component.css']
 })
 export class ReactiveComponent implements OnInit {
-
   formulario: FormGroup;
 
-  constructor( private fromB:FormBuilder ) {
+    // Creacion de Objeto mediante la interfaz de modelo
+    // todoServicio: Servicio = {
+    //   imagen:'',
+    //   descripcion:'',
+    //   categoria:'',
+    // };
+
+
+  constructor( private fromB:FormBuilder, private authSvc: AuthService ) {
     this.createForm();
   }
 
@@ -20,15 +29,21 @@ export class ReactiveComponent implements OnInit {
   createForm(){
     this.formulario = this.fromB.group(
       {
-        name: ['', [Validators.required, Validators.minLength(4),Validators.maxLength(12)]],
-        lastname: ['', Validators.required],
-        email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]]
+        imagen: ['', [Validators.required, Validators.minLength(4),Validators.maxLength(12)]],
+        descripcion: ['', Validators.required],
+        categoria: ['', Validators.required]
       }
     );
   }
 
-  save(){
-    console.log(this.formulario);
-  }
+  // save(){
+  //         //Si no existe un ID ,vamos a crear un nuevo reporte
+  //       this.authSvc.addServicio(this.todoServicio).then(() =>{
+
+  //       console.log('Registro duardado correctamente');
+  //       console.log(this.formulario.value);
+  //     });
+
+  // }
 }
 

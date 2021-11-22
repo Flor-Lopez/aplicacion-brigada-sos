@@ -1,5 +1,5 @@
 .contenedor-background {
-  height: 112vh;
+  height: 100vh;
   background: #219EBC;
   padding-top: 60px;
 }
@@ -11,6 +11,7 @@
   margin-top: -150px;
   margin-bottom: 20px;
   }
+
 
 .logotipo{
   width: 200px;
@@ -34,6 +35,7 @@ input{
   margin: 0 auto 20px;
 }
 
+
 .contenedor-input i{
   position: absolute;
   right: 40px;
@@ -44,13 +46,18 @@ input{
   cursor: pointer;
 }
 
+.contenedor-input .icon-password{
+  top: 38%;
+
+}
+
 .text-validacion{
   display: block;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.btn-ingresar{
+.btn-registro{
   background: #DD3131;
   border-radius:13px;
   font-size: 20px;
@@ -59,34 +66,6 @@ input{
   height: 48px;
   color: #ffffff;
   margin:  0 auto;
-}
-
-hr {
-  width: 85%;
-  margin: 0 auto;
-}
-
-.btn-google{
-  background: #DD3131;
-  border-radius: 18px;
-  height: 50px;
-  width: 352px;
-  color: #ffffff;
-  border: 1px solid #707070;
-  margin-bottom: 28px;
-  font-size: 20px;
-  margin:  0 auto;
-
-}
-
-.btn-facebook{
-  background: #2217BC;
-  margin-bottom: 20px;
-
-}
-
-.icon-google, .icon-facebook{
-  margin-right: 45px;
 }
 
 .content-info-registrarme{
@@ -107,14 +86,10 @@ hr {
 }
 
 /* Responsive */
-@media screen and (max-width: 420px) {
-  .btn-google{
-    width: auto;
-  }
-}
 
 @media screen and (max-width: 1400px) {
   .contenedor-input{
     width: auto;
   }
 }
+

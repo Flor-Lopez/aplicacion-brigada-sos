@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "aplicacion-brigada-sos": {
+      "hosting": {
+        "aplicacion-brigada-sos": [
+          "aplicacion-brigada-sos"
+        ]
+      }
+    }
+  }
+}

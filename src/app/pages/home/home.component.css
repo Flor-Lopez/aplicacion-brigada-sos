@@ -1,8 +1,28 @@
+
+/* BOTON SETTING */
+.contenedor-background-setting{
+  background: #219EBC;
+}
+
+.setting{
+  width: 60px;
+  height: 50px;
+  margin-left: 92%;
+  background: none;
+  border: none;
+}
+
+.img-setting{
+  width: 40px;
+}
+
 .contenedor-background {
   height: 100vh;
   background: #219EBC;
-  padding-top: 40px;
+}
 
+.img-setting{
+  width: 40px;
 }
 
 /* CARD FULL-PRINCIPAL */

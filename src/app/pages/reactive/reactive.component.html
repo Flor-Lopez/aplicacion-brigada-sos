@@ -1,64 +1,67 @@
-<h2>Formulario Reactivo</h2>
+<div class="container mt-5">
+  <h2>Formulario Reactivo</h2>
 
-<hr>
-<form [formGroup]="formulario" (ngSubmit)="save()">
-  <div>
+  <hr>
+  <!-- <form [formGroup]="formulario" (ngSubmit)="save()"> -->
+  <form >
+    <div>
+
+      <div class="form-group row p-2">
+        <label class="col-2 col-form-label">Imagen</label>
+        <div class="col-8">
+
+          <input class="form-control"
+                type="text"
+                placeholder="Imagen"
+                formControlName="imagen"
+                [class.is-invalid]="
+                formulario.get('imagen').invalid &&
+                formulario.get('imagen').touched"
+                >
+        </div>
+      </div>
+
+      <div class="form-group row p-2">
+        <label class="col-2 col-form-label">Descripcion</label>
+        <div class="col-8">
+
+          <input class="form-control"
+                type="text"
+                placeholder="Descripcion"
+                formControlName="descripcion"
+                [class.is-invalid]="
+                formulario.get('descripcion').invalid &&
+                formulario.get('descripcion').touched">
+        </div>
+      </div>
+
+    </div>
 
     <div class="form-group row p-2">
-      <label class="col-2 col-form-label">Nombre</label>
+      <label class="col-2 col-form-label">Categoria</label>
       <div class="col-8">
 
         <input class="form-control"
-              type="text"
-              placeholder="Nombre"
-              formControlName="name"
-              [class.is-invalid]="
-              formulario.get('name').invalid &&
-              formulario.get('name').touched"
-              >
+                type="text"
+                placeholder="Categoria"
+                formControlName="categoria"
+                [class.is-invalid]="
+                formulario.get('categoria').invalid &&
+                formulario.get('categoria').touched">
       </div>
     </div>
 
-    <div class="form-group row p-2">
-      <label class="col-2 col-form-label">Apellido</label>
-      <div class="col-8">
-
-        <input class="form-control"
-              type="text"
-              placeholder="Apellido"
-              formControlName="lastname"
-              [class.is-invalid]="
-              formulario.get('lastname').invalid &&
-              formulario.get('lastname').touched">
+    <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Guardar
+        </button>
       </div>
     </div>
 
-  </div>
+  </form>
 
-  <div class="form-group row p-2">
-    <label class="col-2 col-form-label">Correo</label>
-    <div class="col-8">
-
-      <input class="form-control"
-              type="email"
-              placeholder="Correo electrónico"
-              formControlName="email"
-              [class.is-invalid]="
-              formulario.get('email').invalid &&
-              formulario.get('email').touched">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label class="col-2 col-form-label">&nbsp;</label>
-    <div class="input-group col-md-8">
-      <button type="submit" class="btn btn-outline-primary btn-block">
-        Guardar
-      </button>
-    </div>
-  </div>
-
-</form>
-
-<hr>
-<h5>Estado: {{formulario.valid}}</h5>
+  <hr>
+  <h5>Estado: {{formulario.valid}}</h5>
+</div>

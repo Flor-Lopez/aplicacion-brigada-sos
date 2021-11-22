@@ -1,5 +1,8 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +10,9 @@ import { CargarScriptsService } from 'src/app/services/cargar-scripts.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public user$: Observable<any> = this.authSvc.afAuth.user;
 
-  constructor(private _cargaScripts: CargarScriptsService) {
+  constructor(private authSvc: AuthService,  private router: Router, private _cargaScripts: CargarScriptsService) {
     // Script a Cargar de javascript
     this._cargaScripts.carga(["chatbot"]);
   }
@@ -16,4 +20,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  async cerrarSesion(){
+    try{
+      await this.authSvc.logout();
+      this.router.navigate(['/login']);
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
 }
